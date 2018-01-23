@@ -11,7 +11,7 @@ from gradient_descent import gradient_descent
 from sigmoid import sigmoid
 
 # import and clean data
-data = pd.read_csv('cancer_dataset.csv')
+data = pd.read_csv('dataset_single.csv')
 clean_data = datacleaner.autoclean(data, True).values
 X = np.matrix(clean_data[:, 0:9])
 y = np.matrix(clean_data[:, 9:10])
@@ -27,8 +27,8 @@ for i in range(0, m):
 theta = np.zeros((X.shape[1], 1))
 
 # initialize training params
-alpha = 0.1
-iterations = 100
+alpha = 0.0001
+iterations = 1000
 
 # test cost function
 J, grad = compute_cost(X, y, theta)
@@ -44,6 +44,7 @@ z = X.dot(theta)
 h = sigmoid(z)
 acc = 0
 for i in range(0, m):
-    acc += 1 if h[i] >= 0.5 and y[i] == 1 else 0
+    acc += 1 if (h[i] >= 0.5 and y[i] == 1) or (h[i] < 0.5 and y[i] == 0) else 0
 
+# print accuracy (roughly 84%)
 print('Accuracy: ' + str(acc / m))

@@ -8,6 +8,7 @@ import datacleaner
 import scipy
 from compute_cost import compute_cost
 from gradient_descent import gradient_descent
+from sigmoid import sigmoid
 
 # import and clean data
 data = pd.read_csv('cancer_dataset.csv')
@@ -39,3 +40,10 @@ J, grad = compute_cost(X, y, theta)
 plt.plot(range(iterations), J_history)
 
 # check accuracy
+z = X.dot(theta)
+h = sigmoid(z)
+acc = 0
+for i in range(0, m):
+    acc += 1 if h[i] >= 0.5 and y[i] == 1 else 0
+
+print('Accuracy: ' + str(acc / m))

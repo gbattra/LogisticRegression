@@ -23,12 +23,16 @@ m = y.shape[0]
 for i in range(0, m):
     y[i] = 1 if y[i] == 4 else 0
 
+# add ones to X
+X0 = np.ones((X.shape[0], 1))
+X = np.hstack((X0, X))
+
 # initialize thetas
 theta = np.zeros((X.shape[1], 1))
 
 # initialize training params
 alpha = 0.0001
-iterations = 1000
+iterations = 1500
 
 # test cost function
 J, grad = compute_cost(X, y, theta)
@@ -46,5 +50,5 @@ acc = 0
 for i in range(0, m):
     acc += 1 if (h[i] >= 0.5 and y[i] == 1) or (h[i] < 0.5 and y[i] == 0) else 0
 
-# print accuracy (roughly 84%)
+# print accuracy (roughly 96%)
 print('Accuracy: ' + str(acc / m))

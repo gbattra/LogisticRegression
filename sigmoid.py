@@ -7,6 +7,6 @@ def sigmoid(z):
     # compute sigmoid value for each prediction
     for i in range(0, g.shape[0]):
         for v in range(0, z.shape[1]):
-            g[i, v] = 1 / (1 + np.power((np.e, -z.item(i))))
+            g[i, v] = 1 / (1 + np.power(np.e, -z.item(i)))
 
     return g

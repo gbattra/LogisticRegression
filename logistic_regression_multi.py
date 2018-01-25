@@ -23,7 +23,7 @@ num_labels = y.max()
 L = 1
 
 # initialize learning params
-alpha = 0.001
+alpha = 0.01
 iterations = 100
 
 # get trained Theta matrix

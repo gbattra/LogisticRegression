@@ -10,16 +10,16 @@ def gradient_descent(X, y, theta, alpha, iterations):
     m = y.shape[0]
 
     # run gradient descent
-    for iter in range(0, iterations):
+    for i in range(0, iterations):
         # compute prediction
         z = X.dot(theta)
         h = sigmoid(z)
 
         # compute cost
-        J_history[iter] = (1 / m) * (((-y.T * np.log(h)) - (1 - y.T) * np.log(1 - h)).sum())
+        J_history[i] = (1 / m) * (((-y.T * np.log(h)) - (1 - y.T) * np.log(1 - h)).sum())
 
         # compute gradient
-        grad = ((h - y).T.dot(X)).T
+        grad = (1 / m) * ((h - y).T.dot(X)).T
 
         # update thetas
         theta = theta - (alpha * grad)

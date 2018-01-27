@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9c84ac-af50-439d-84a1-008df053d36c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dataset_multi.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dataset_single.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/gradient_descent.py" afterPath="$PROJECT_DIR$/gradient_descent.py" />
-      <change beforePath="$PROJECT_DIR$/gradient_descent_multi.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset.csv" afterPath="" />
       <change beforePath="$PROJECT_DIR$/logistic_regression_multi.py" afterPath="$PROJECT_DIR$/logistic_regression_multi.py" />
       <change beforePath="$PROJECT_DIR$/logistic_regression_single.py" afterPath="$PROJECT_DIR$/logistic_regression_single.py" />
-      <change beforePath="$PROJECT_DIR$/train_classifier.py" afterPath="$PROJECT_DIR$/train_classifier.py" />
+      <change beforePath="$PROJECT_DIR$/sigmoid.py" afterPath="$PROJECT_DIR$/sigmoid.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logistic_regression_single.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="logistic_regression_single.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logistic_regression_single.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding>
                 <element signature="e#146#164#0" expanded="true" />
               </folding>
@@ -44,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logistic_regression_multi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logistic_regression_multi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logistic_regression_multi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="e#55#73#0" expanded="true" />
               </folding>
@@ -81,8 +77,8 @@
       <file leaf-file-name="sigmoid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sigmoid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="37" />
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,12 +100,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/compute_cost.py" />
-        <option value="$PROJECT_DIR$/sigmoid.py" />
         <option value="$PROJECT_DIR$/gradient_descent_multi.py" />
         <option value="$PROJECT_DIR$/gradient_descent.py" />
-        <option value="$PROJECT_DIR$/logistic_regression_single.py" />
         <option value="$PROJECT_DIR$/train_classifier.py" />
         <option value="$PROJECT_DIR$/logistic_regression_multi.py" />
+        <option value="$PROJECT_DIR$/sigmoid.py" />
+        <option value="$PROJECT_DIR$/logistic_regression_single.py" />
       </list>
     </option>
   </component>
@@ -535,14 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sigmoid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradient_descent_multi.py" />
     <entry file="file://$PROJECT_DIR$/compute_cost.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -564,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_regression_single.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#146#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -586,10 +564,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logistic_regression_multi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="e#55#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sigmoid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_regression_single.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding>
+            <element signature="e#146#164#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,10 +9,10 @@ from sigmoid import sigmoid
 from train_classifier import train_classifier
 
 # import and clean data
-data = pd.read_csv('dataset.csv')
+data = pd.read_csv('dataset_multi.csv')
 clean_data = datacleaner.autoclean(data, True).values
-X = np.matrix(clean_data[:, 0:9])
-y = np.matrix(clean_data[:, 9:10])
+X = np.matrix(clean_data[:, 0:34])
+y = np.matrix(clean_data[:, 34:35])
 
 # add ones to X
 X0 = np.ones((X.shape[0], 1))
@@ -24,7 +24,7 @@ L = 1
 
 # initialize learning params
 alpha = 0.01
-iterations = 10000
+iterations = 5000
 
 # get trained Theta matrix
 Theta = train_classifier(X, y, classes, L, iterations, alpha)

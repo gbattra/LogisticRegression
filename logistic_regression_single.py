@@ -11,7 +11,7 @@ from gradient_descent import gradient_descent
 from sigmoid import sigmoid
 
 # import and clean data
-data = pd.read_csv('dataset.csv')
+data = pd.read_csv('dataset_single.csv')
 clean_data = datacleaner.autoclean(data, True).values
 X = np.matrix(clean_data[:, 0:9])
 y = np.matrix(clean_data[:, 9:10])
@@ -32,7 +32,7 @@ theta = np.zeros((X.shape[1], 1))
 
 # initialize training params
 alpha = 0.01
-iterations = 1500
+iterations = 10000
 
 # test cost function
 J, grad = compute_cost(X, y, theta)

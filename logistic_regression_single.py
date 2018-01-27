@@ -11,7 +11,7 @@ from gradient_descent import gradient_descent
 from sigmoid import sigmoid
 
 # import and clean data
-data = pd.read_csv('dataset_single.csv')
+data = pd.read_csv('dataset.csv')
 clean_data = datacleaner.autoclean(data, True).values
 X = np.matrix(clean_data[:, 0:9])
 y = np.matrix(clean_data[:, 9:10])
@@ -31,7 +31,7 @@ X = np.hstack((X0, X))
 theta = np.zeros((X.shape[1], 1))
 
 # initialize training params
-alpha = 0.0001
+alpha = 0.01
 iterations = 1500
 
 # test cost function
@@ -50,5 +50,5 @@ acc = 0
 for i in range(0, m):
     acc += 1 if (h[i] >= 0.5 and y[i] == 1) or (h[i] < 0.5 and y[i] == 0) else 0
 
-# print accuracy (~ 97%)
+# print accuracy (~ 96%)
 print('Accuracy: ' + str(acc / m))

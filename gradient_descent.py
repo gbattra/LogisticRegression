@@ -22,6 +22,6 @@ def gradient_descent(X, y, theta, alpha, iterations):
         grad = (1 / m) * ((h - y).T.dot(X)).T
 
         # update thetas
-        theta = theta - (alpha * grad)
+        theta = theta - alpha * grad
 
     return theta, J_history

@@ -3,22 +3,24 @@ import matplotlib.pyplot as plt
 from gradient_descent import gradient_descent
 
 
-def train_classifier(X, y, classes, L, iterations, alpha):
+def train_classifier(X, y, num_labels, L, iterations, alpha):
 
-    # get m and n for Theta size
-    m = X.shape[0]
+    # get n for Theta size
     n = X.shape[1]
 
-    # Theta is the matrix where we will store the values of each theta we train
-    Theta = np.zeros((classes.size, n))
+    # Theta is the matrix where we will store the theta values of each classifier we train
+    Theta = np.zeros((num_labels, n))
+
+    # J_histories is the matrix of the J_history for each classifier we train
+    J_histories = np.zeros((num_labels, iterations))
 
     # train Theta for each class
-    for i in range(0, classes.size):
+    for i in range(0, num_labels):
         # get class
-        c = classes[i]
+        c = i + 1
 
         # preprocess y to be binary where 1 is when y = c
-        y_processed = y
+        y_processed = y.copy()
         for t in range(y.shape[0]):
             y_processed[t] = 1 if y[t] == c else 0
 
@@ -31,9 +33,7 @@ def train_classifier(X, y, classes, L, iterations, alpha):
         # add this theta to Theta matrix
         Theta[i, :] = np.array(theta.T[0, :])
 
-        # plot J_history to make sure gradient descent multi is working properly
-        plt.figure('J_history ' + str(c))
-        plt.plot(range(iterations), J_history)
-        plt.show()
+        # add this J_history to the J_histories matrix
+        J_histories[i, :] = J_history
 
-    return Theta
+    return Theta, J_histories

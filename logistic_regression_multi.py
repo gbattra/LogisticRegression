@@ -44,8 +44,8 @@ h = sigmoid(z)
 
 # calculate accuracy of classifier
 predicted_classes = h.argmax(axis=1) + 1  # plus one because this returns a zero indexed array but classes start with 1
-err = np.abs((predicted_classes - y)).sum()
+err = np.count_nonzero(predicted_classes - y)
 acc = (m - err) / m
 
-# print accuracy (~ 97%)
+# print accuracy (~ 98%)
 print('Accuracy: ' + str(acc))
